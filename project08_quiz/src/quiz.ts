@@ -58,7 +58,9 @@ let scoreObtained = 0;
 let marksPerQuestion = 100/questionList.length;
 let totalScore = 100;
 let questionAsked = 0;
-
+console.log("##############################")
+console.log("#Welcome to the Pakistan Quiz#")
+console.log("##############################")
 while (true) {
     let numberGuess = Math.floor(Math.random() * ((questionList.length-1) - 0 + 1)) + 0;
     // console.log(numberGuess);
@@ -92,7 +94,7 @@ while (true) {
 
 }
 //Do and Show the Grading
-let percentile=(scoreObtained/totalScore)*100;
+let percentile=Math.round((scoreObtained/totalScore)*100);
 //console.log(`Your score is ${scoreObtained}`);
 if (scoreObtained >= 75) {
     console.log(`Your Score % is ${percentile}%`);
