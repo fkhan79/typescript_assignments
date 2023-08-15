@@ -62,7 +62,7 @@ console.log("##############################")
 console.log("#Welcome to the Pakistan Quiz#")
 console.log("##############################")
 while (true) {
-    let numberGuess = Math.floor(Math.random() * ((questionList.length-1) - 0 + 1)) + 0;
+    let numberGuess = Math.floor(Math.random() * questionList.length);
     // console.log(numberGuess);
     let questionToAsk = questionList[numberGuess]
     //  console.log(questionList);
