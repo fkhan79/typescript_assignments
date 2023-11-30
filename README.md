@@ -1,3 +1,9 @@
+# Open Powershell in Adminstrator mode
+## Run command:
+> Set-ExecutionPolicy RemoteSigned
+
+
+
 # TypeScript Node JS Assignments Repository
 ## Create a new TypeScript Project
 > 1. mkdir <project_folder_name>
