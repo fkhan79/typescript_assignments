@@ -1,9 +1,3 @@
-# Open Powershell in Adminstrator mode
-## Run command:
-> Set-ExecutionPolicy RemoteSigned
-
-
-
 # TypeScript Node JS Assignments Repository
 
 ## Open Powershell in Adminstrator mode
