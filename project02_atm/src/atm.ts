@@ -11,7 +11,7 @@ interface account {
 let accounts: account[] = [];
 accounts.push({
     userName: "Faisal", password: 3232,
-    customerName: "Faisal Khan", customerBalance: 100000, pinRetries: 0,
+    customerName: "Faisal Khan", customerBalance: 100, pinRetries: 0,
     accountBlocked: false
 });
 accounts.push({
@@ -83,14 +83,16 @@ while (true) {
                     console.log(`Your Current Balance is ${found.customerBalance}`);
                     let amount = await inquirer.prompt([
                         {
-                            name: "witdrawal",
+                            name: "withdrawal",
                             type: "number",
-                            message: "Deposit Amount:"
+                            message: "Withdrawal Amount:"
                         }
                     ]);
-                    if (amount.witdrawal >= 0) {
-                        found.customerBalance -= amount.witdrawal;
+                    if (amount.withdrawal >= 0 && found.customerBalance>amount.witdrawal) {
+                        found.customerBalance -= amount.withdrawal;
                         console.log(`Your Current Balance after Withdrawal is ${found.customerBalance}`);
+                    }else if (found.customerBalance<amount.withdrawal){
+                        console.log(`Your Current Balance is less than Withdrawal Amount. Your Balance is ${found.customerBalance}`);
                     }
                     else {
                         console.log("Withdrawal Amount cannot be Zero or Negative");
