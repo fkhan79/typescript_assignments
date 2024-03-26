@@ -56,7 +56,7 @@ while (true) {
                 {
                     name: "operation",
                     type: "list",
-                    choices: ["Cash Deposit", "Cash Withdrawal", "View Balance"],
+                    choices: ["Cash Deposit", "Cash Withdrawal", "View Balance","Exit"],
                     message: "Select your desired operation"
                 }
             ]);
@@ -101,6 +101,10 @@ while (true) {
                     console.log(`Dear ${found.customerName}: Your balance is ${found.customerBalance}`);
                     break;
                 }
+            }
+            if (opr.operation==="Exit"){
+                console.log("Exiting Application:");
+                break;
             }
         }
     } else {
